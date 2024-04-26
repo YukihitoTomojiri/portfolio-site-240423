@@ -1,0 +1,9 @@
+<div class='contents row'>
+  <% @portfolios.each do |portfolio| %>
+    <div class='content_post'>
+      <p><%= portfolio.title %></p>
+      <p><%= portfolio.url %></p>
+      <p><%= portfolio.comment %></p>
+    </div> 
+  <% end %>
+</div> 
