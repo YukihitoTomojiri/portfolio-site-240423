@@ -1,0 +1,180 @@
+.main-visual{
+  position: relative;
+}
+.main-bg{
+  width: 100%;
+  height: 929px;
+  object-fit: cover; 
+}
+.main-visual-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: #29292973;
+  padding: 10px;
+  text-align: center;
+}
+
+.about-contents {
+  text-align: center;
+  margin: 20px;
+}
+.mypicture {
+  width: 200px;
+}
+
+/* About セクション */
+.about-description {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.about-description p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-description h3 {
+  color: #333;
+  margin-top: 40px;
+}
+
+.about-description h5 {
+  color: #666;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+.about {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.about li {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.about-wrapper {
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+  text-align: left;
+  margin-bottom: 10px;
+  height: 400px;
+}
+
+.about-wrapper-left {
+  max-width: 1197px;
+  width: 40%;
+}
+.about-picture {
+  max-width: 374px;
+  max-height: 268px;
+  margin-top: 66px;
+  margin-left: 20px;
+}
+.about-wrapper-right li{
+  text-align: left;
+}
+
+/* スマホやタブレットの画面サイズに対応するためのメディアクエリ */
+@media (max-width: 768px) {
+  .about-wrapper {
+    height: auto;
+    flex-direction: column; /* スマホやタブレットでは縦並びに変更 */
+    align-items: center; /* アイテムを中央に揃える */
+  }
+  .about-wrapper-right, .about-wrapper-left {
+    width: 100%; /* コンテンツを画面幅いっぱいに表示 */
+  }
+}
+
+.second-visual{
+  position: relative;
+}
+.second-bg{
+  width: 100%;
+  height: 824px;
+  object-fit: cover; 
+}
+.second-visual-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 420px;
+  transform: translate(-50%, -50%);
+  color: black;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: white;
+  border-radius: 0.5rem;
+}
+.btn-flat {
+  overflow: hidden;
+  padding: 1.5rem 6rem;
+  color: #fff;
+  border-radius: 0;
+  background: #000;
+}
+
+.btn-flat span {
+  position: relative;
+}
+
+.btn-flat:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-96%);
+  transform: translateX(-96%);
+  background: #eb6877;
+}
+
+.btn-flat:hover:before {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
