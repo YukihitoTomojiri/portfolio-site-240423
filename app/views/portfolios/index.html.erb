@@ -1,9 +1,71 @@
-<div class='contents row'>
-  <% @portfolios.each do |portfolio| %>
-    <div class='content_post'>
-      <p><%= portfolio.title %></p>
-      <p><%= portfolio.url %></p>
-      <p><%= portfolio.comment %></p>
-    </div> 
-  <% end %>
-</div> 
+<%= render "shared/header"%>
+<div class='main-visual'>
+  <%= image_tag 'site-bg-visual.JPG', class: 'main-bg' %>
+  <div class='main-visual-inner'>
+    <h1>Yukihito Tomojiri</h1>
+    <p>Web Corder</p>
+  </div>
+</div>
+<div class= 'about-contents'>
+  <div class='about-title'>
+    <h2>About</h2>
+    <p>-自己紹介-</p>
+    <%= image_tag 'mypicture.png', class: 'mypicture' %>
+  </div>
+  <div class='about-description'>
+    <p>Web Corderの友尻将士です。</p>
+    <p>理学療法士からIT業界に転職しました。<br>ユーザーフレンドリーで効果的なWebサイトを作り上げるよう努力いたします。</p>
+    <h2>強み</h2>
+    <ul class='about'>
+      <li>問題解決能力</li>
+      <li>コミュニケーション能力</li>
+      <li>ITスキル</li>
+      <li>チームワーク</li>
+      <li>企画力</li>
+      <li>継続力</li>
+    </ul>
+    <h2>これまでの実績</h2>
+
+    <% @portfolios.each do |portfolio| %>
+      <div class='about-wrapper'>
+        <div class='about-wrapper-left'>
+            <%= image_tag 'pexels-vojtech-okenka-127162-392018.jpg', class: 'about-picture' %>
+        </div>
+        <div class='about-wrapper-right'>
+          <ul>
+            <li><h3><%= portfolio.title %></h3></li>
+            <li><h5><%= portfolio.skill %></h5></li>
+            <li><h4>問題点:</h4></li>
+              <ul>
+                <li><%= portfolio.problem %></li>
+              </ul>
+            <li><h4>効果:</h4></li>
+              <ul>
+                <li><%= portfolio.result %></li>
+              </ul>
+          </ul>
+          
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class='second-visual'>
+  <%= image_tag 'code.jpg', class: 'second-bg' %>
+  <div class='second-visual-inner'>
+    <p>デザインの再現性はコーディングによって決まります。</p>
+    <p>Webサイト制作、ポートフォリオ準備</p>
+    <p>コーダーとの協業をお考えの方</p>
+    <p>制作会社の皆様</p>
+    <p>ご依頼・ご相談いつでも受け付けております。</p>
+    <p>お気軽にお声掛けください！</p>
+    <%= link_to root_path, class: "btn btn-flat" do %>
+      <span>Connect</span>
+    <% end %>
+  </div>
+    
+</div>
+
+
+
+<%= render "shared/footer" %>

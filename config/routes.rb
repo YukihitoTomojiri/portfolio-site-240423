@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :portfolios, only: :index
+
+  root to: 'portfolios#index'
 end

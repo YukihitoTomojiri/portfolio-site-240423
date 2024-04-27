@@ -13,8 +13,12 @@
 ActiveRecord::Schema[7.1].define(version: 2024_04_23_144417) do
   create_table "portfolios", charset: "utf8mb3", force: :cascade do |t|
     t.string "title", null: false
-    t.string "url", null: false
-    t.text "comment"
+    t.string "skill"
+    t.text "problem"
+    t.text "countermeasure"
+    t.text "system"
+    t.text "result"
+    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

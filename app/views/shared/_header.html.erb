@@ -1,0 +1,18 @@
+
+<header class="site-header">
+  <div class="wrapper site-header__wrapper">
+    <%= link_to root_path, class: "logo" do %>
+      <%= image_tag "logo_sample.png", alt: "Company Logo", class: "logo-icon" %>
+    <% end %>
+    <nav class="nav">
+      <button class="nav__toggle" aria-expanded="false" type="button">
+        menu
+      </button>
+      <ul class="nav__wrapper">
+        <li class="nav__item"><a><%= link_to "About", "#", class: "nav-link" %></a></li>
+        <li class="nav__item"><a><%= link_to "Work", "#", class: "nav-link" %></a></li>
+        <li class="nav__item"><a><%= link_to "Connect", "#", class: "nav-link" %></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
